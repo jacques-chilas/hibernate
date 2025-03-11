@@ -1,0 +1,35 @@
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: dbhibernate         # Create a default database
+      MYSQL_USER: chilas456                 # Create a default user
+      MYSQL_PASSWORD: Jacquessylla-0         # Set the password for the default user
+    volumes:
+      - ~/Projects/databases/mysqldata:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin","ping","-h","localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  phpmyadmin:
+    image: phpmyadmin:apache
+    container_name: phpmyadmin
+    ports:
+      - "8080:80"
+      - "9000:9000"
+    environment:
+      PMA_HOST: mysql
+      PMA_PORTS: "3306"
+      PMA_USER: chilas456
+      PMA_PASSWORD: Jacquessylla-0
+    depends_on:
+      mysql:
+        condition: service_healthy
+    

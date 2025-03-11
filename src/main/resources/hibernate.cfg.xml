@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- MySQL Database Connection -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/dbhibernate</property>
+        <property name="hibernate.connection.username">chilas456</property>
+        <property name="hibernate.connection.password">Jacquessylla-0</property>
+
+        <!-- Hibernate Properties -->
+
+        <!-- SQL dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Mapping Entities: Names the annotated entity classes -->
+        <mapping class="org.schoolproject.model.Employe"/>
+        <mapping class="org.schoolproject.model.Lieu"/>
+        <mapping class="org.schoolproject.model.Affecter"/>
+    </session-factory>
+</hibernate-configuration>
+
