@@ -1,7 +1,7 @@
 # Employee Assignment Management System
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Java](https://img.shields.io/badge/Java-8%2B-orange)](https://www.java.com)
+[![Java](https://img.shields.io/badge/Java-17%2B-orange)](https://www.java.com)
 [![Hibernate](https://img.shields.io/badge/Hibernate-5.x-yellowgreen)](https://hibernate.org/)
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-blue)](https://www.mysql.com/)
 [![Swing](https://img.shields.io/badge/Swing-GUI-lightgrey)](https://docs.oracle.com/javase/tutorial/uiswing/)
